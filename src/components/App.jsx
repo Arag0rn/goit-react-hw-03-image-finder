@@ -1,16 +1,24 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+import { Component } from "react";
+import { Searchbar } from "./Searchbar";
+import {GlobalStyle} from "./GlobalStyle.styled"
+export class App extends Component{
+  state = {
+ 
+  
+  }
+
+  render() {
+    const appStyles = {
+      display: "grid",
+      gridTemplateColumns: "1fr", 
+      gridGap: "16px", 
+      paddingBottom: "24px", 
+    };
+
+    return (
+      <div style={appStyles}>
+        <Searchbar />
+        <GlobalStyle />
     </div>
-  );
-};
+  );}
+}
